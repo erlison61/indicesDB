@@ -1,0 +1,21 @@
+﻿create table sancoes(
+	id varchar(30) primary key,
+	codigoI varchar(30),
+	data varchar(30),
+	usuario varchar(30),
+	estado1 varchar(30), 
+	cidadeJ varchar(30),
+	estado2 varchar(30)
+)
+select * from sancoes;
+
+COPY sancoes FROM '/home/aluno/meuArquivo.csv'  using delimiters ',';
+
+create index idx_teste on sancoes(id);
+
+drop index idx_teste
+
+explain analyse select * from sancoes where id = '641508';
+
+
+
